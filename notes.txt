@@ -1,0 +1,40 @@
+Things to do:
+1. Work on seperating the pipeline better
+2. Work on better initial data validation
+3. Get all clustering methods working and available, also allow the possibility of tuning the hyperparameters around clustering
+4. Think about setting up some clustering coefficients (also think about clustering on only the most important features)
+
+
+
+NOTES:
+
+1. I need to be able to train the model on individual clusters and test on individual clusters
+
+Seems like my clsuters are not being orhtogonalized properly, i need to pass in the vectors individually to the orthog function
+
+At this point i believe my algorithm is working correctly, I can see the model is being trained on each cluster (with a mini batch) correctly
+I need to investigate the mini batching approach (ensure shffle is being applied) and then research all different parts of the pipeline
+-cluster generation
+-optimisation
+- dropout vectors
+
+Something to think about: use mini batching to get an average gradient vector over each batch, use that as the main vector for the cluster
+
+I need to identify why the weights are not being changed or if thwey are.
+
+Prettu good point right now: Things to test:
+
+- Run a model using clustering on labels and one on features
+- For each model, run a grid search on learning rate, gradient Sort Order (decreasing or increasing)
+- Perform tests on a simple model and a deeper model
+- Perform 100 independent training runs and record the mean and std of the MAE and MSE for each model
+
+Specific tests to run:
+Model Architecture: 1 hidden layer, 3 hidden layers
+Clustering: On labels, on features
+learning rate: 0.01, 0.1, 0.001
+Gradient Sort Order: Increasing, Decreasing
+
+Data Visualization:
+- tabulate the results in a table
+- plot the validation loss over time for each model (to show convergence)

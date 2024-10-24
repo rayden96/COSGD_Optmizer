@@ -38,3 +38,13 @@ Gradient Sort Order: Increasing, Decreasing
 Data Visualization:
 - tabulate the results in a table
 - plot the validation loss over time for each model (to show convergence)
+
+1. cluster based on binned outputs (regression)
+2. cluster based on errors (loss)
+3. clustering based on curriculum approach (easy to hard)
+4. Orthogonalization techniques (leaky, )
+5. Clustering on activations (potentially last layer)
+
+https://en.m.wikipedia.org/wiki/Test_functions_for_optimization
+
+https://wandb.ai/site/

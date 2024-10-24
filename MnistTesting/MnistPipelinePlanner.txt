@@ -1,0 +1,34 @@
+This serves as the planning document for testing COSGD on the Mnist dataset along with all the different experiments
+
+Clustering Phase and statistics:
+1. record clustering method, number of clusters and how it was tuned, statistics on the clustering:
+    - Label spread for clusters
+    - Big O notation
+    - Time taken to cluster
+
+Clustering choice:
+1. What method choice
+    - hyper parameter tuning
+    - comparisons against other clustering
+
+Model Training:
+1. We aim to speed up training
+    - evaluation multiple times over set of epochs
+    - compare against control (and other COSGD models)
+    - time comparison of training
+    - model size comparison
+
+2. We aim to prevent catastrophic forgetting
+    - only train on some of the data and then retrain
+    - compare against EWC and newer techniques
+
+3. Hyper parameter evaluation and model architecture evaluation
+    - ablation study
+    - impact of changing hyper parameters
+
+4. Post clustering evaluation
+    - leaky Orthogonalization
+    - dropout Orthogonalization
+    - EWC Orthogonalization
+
+    
